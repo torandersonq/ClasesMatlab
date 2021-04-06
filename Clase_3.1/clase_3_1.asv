@@ -29,9 +29,8 @@ switch Eleccion
         postre = 0;
 end
 %% fprintf : Visualiza una o mas salidas 
-tf=input('Ingresa la temperatura en F°: ');
-tc=(tf-32)/1.8;
-fprintf('La temperatura en F° es: %12.4g\nLa temperatura en C° es: %12.4f\n',tf,tc);
+tf=input('Temperatura en F°');
+tc=(tf-32)/1.
 %% input : Pide al usuario una entrada por teclado y en este caso lo guarda en p
 p=input('Digite el precio original');
 %% uiimport : Incializa el asistente de importacion de datos
