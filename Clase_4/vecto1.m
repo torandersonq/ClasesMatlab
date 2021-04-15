@@ -7,7 +7,7 @@ x=input('Digite el o los valores de x: '); % Solicita Valor(es) de X
 y=input('Digite el o los valores de y: '); % Solicita Valor(es) de Y
 z=input('Digite el o los valores de z: '); % Solicita Valor(es) de Z
 G=(h.*x+k.*y)./(2.*(x+y).^h) + (3*exp(h.*y./2.*z))./(z.^(0.5.*y./x)) - sqrt(abs((x-y)./2.*z)); %% Operacion funcion
-disp('el valor de G es: ');
+disp('el valor de G es:  ');
 disp(G); % Impresion resultado
 end
 
