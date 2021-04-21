@@ -1,4 +1,4 @@
-function [] = funcioneskm(a,b,p,g)
+function [k,m] = funcioneskm(a,b,p,g)
 % Grafica ecuacion 1 y 2 en uno mismo grafico
 % variables de entrada a=-pi, b=pi, p=pi/20, g=3
 a=input('Ingrese el intervalo inferior: '); % Intervalo inferior
