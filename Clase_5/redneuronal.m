@@ -19,6 +19,6 @@ y1=x1*w1; %Salida sin la bias
 b1=2;
 %y=sum(x*w)-b
 y2=y1-b1 %Salida con la vias
-surf(w2) %surf sirve para graficar matrices en 3 dimensiones
+surf(w1) %surf sirve para graficar matrices en 3 dimensiones
 xlabel('x'),ylabel('y'),zlabel('z'), grid on
 %%

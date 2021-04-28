@@ -1,10 +1,12 @@
-%% 1
+%% funcion de activacion
 x=[-3 1 4 -2];
 b=-1;
-w=[14 9 7 5; 6 1 3 0 ];
-y=x*w'+b
+w=[14 9 7 5; 6 1 3 0];
+y=x*w'+b % Como la matriz no es cuadrara se aplica la tranpuesta
 s1=tanh(y)
+plot(s1)
 s2=logsig(y)
+plot(s2)
 %% 2
 x=[-3 1 4 -2];
 b=1;

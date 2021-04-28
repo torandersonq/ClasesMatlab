@@ -6,6 +6,8 @@ s1=purelin(a);
 plot(s1)
 s2=logsig(a);
 plot(s2)
+%% 
+
 s3=hardlim(a);
 plot(s3)
 s4=hardlims(a);
