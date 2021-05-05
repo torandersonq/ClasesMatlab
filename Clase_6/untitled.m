@@ -34,13 +34,25 @@ gtext('Datos'), gtext('Pendiente'), gtext('Pendiente e interseccion');
 Rsq1 = 1 - sum((y - yCalc1).^2)/sum((y - mean(y)).^2)
 Rsq2 = 1 - sum((y - yCalc2).^2)/sum((y - mean(y)).^2)
 %% Ejercicio 2
-% valor propio (Vp)variable independiente, (Pv)porcentaje de varianza variable independdiente
+% valor propio (Vp)variable independiente, (Pv)porcentaje de varianza variable dependiente
 % n : numero de elementos
+n = 10; 
 Vp = [2.39 1.41 1.20 1.04 0.96 0.92 0.88 0.62 0.39 0.18];
 Pv = [23.93 14.12 12.02 10.44 9.64 9.25 8.76 6.16 3.92 1.77];
+SVp= sum(Vp) % Sumatoria variable independiente
+SPv= sum(Pv) % Sumatoria varaible dependiente
+Sxx = SVp.^2 - (SVp.^2 ./ n) % Varianza con respecto a xx
+Sxy = SVp .* SPv - ((SVp.*SPv)./n)% Varianza con respecto a xy
+W1 = Sxy./Sxx
+W0 = mean(Pv)-W1*mean(Vp)% Punto de corte
 scatter(Vp,Pv)
 plot(Vp,Pv,'o','linewidth', 3)
 xlabel('Vlr propio','fontsize', 14,'color','k')
 ylabel('% de varianza acumulativa','fontsize', 14,'color','k'), grid
 title({'Valores propios resultantes del análisis de componentes'; 'principales de las variables fisicoquímicas'},...
 'fontsize', 16,'color','k')
+%%
+scatter(W0,W1)
+plot(W0,W1,'o','linewidth', 3)
+xlabel('Punto de corte','fontsize', 14,'color','k')
+
