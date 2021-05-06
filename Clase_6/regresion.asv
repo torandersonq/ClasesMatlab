@@ -43,18 +43,16 @@ Sxx = sum(Vp.^2) - ((sum(Vp)^2) / n) % Varianza con respecto a xx
 Sxy = sum(Vp.*Pv) - (sum(Vp)*sum(Pv)/n)% Varianza con respecto a xy
 W1 = Sxy/Sxx % Varaible independiente
 W0 = mean(Pv)-W1*mean(Vp)% Punto de corte
-%% Grafica analisis de componenetes principales de las varaiables fisioquimicas (Vp Pv) con punto de corte (W1 W0)
+%% Grafica analisis de componenetes principales de las varaiables fisioquimicas
 scatter(Vp,Pv)
-plot(Vp,Pv,'o','linewidth', 3) 
-hold on
-plot(W0,W1,'o','linewidth', 3, 'color', 'r')
+plot(Vp,Pv,'o','linewidth', 3)
 xlabel('Valor propio (independiente)','fontsize', 14,'color','k')
 ylabel('Porcentaje de varainza (dependiente)','fontsize', 14,'color','k'), grid
-title({'Valores propios resultantes del análisis de componentes'; 'principales de las variables fisicoquímicas'; "Punto de corte REGRESION"},...
+title({'Valores propios resultantes del análisis de componentes'; 'principales de las variables fisicoquímicas'},...
 'fontsize', 16,'color','k')
 %% Grafica para el punto de corte (regresion)
 scatter(W1,W0)
-plot(W1,W0,'o','linewidth', 3, 'color', 'r')
+% plot(W1,W0,'o','linewidth', 3, 'color', 'r')
 xlabel('W1 = Sxy / Sxx  (independiente)','fontsize', 12,'color','k')
 ylabel('W0 = Pv¯ - W1 * Vp¯   (dependiente)','fontsize', 12,'color','k'), grid
 title({'Punto de corte (REGRESION)'})
