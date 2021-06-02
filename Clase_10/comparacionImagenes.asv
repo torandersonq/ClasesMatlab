@@ -1,0 +1,2 @@
+I1 = imread('antigua.jpg'); % Lee una imagen y convierte a matrizBidimensional/arregloTridimensional
+imfinfo(
